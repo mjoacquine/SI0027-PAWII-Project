@@ -17,3 +17,4 @@ Gunakan studi kasus yang sama dengan materi slide: **redesign navigasi aplikasi 
 ## Kaitan dengan Tugas Project Mandiri
 
 Checklist ini adalah latihan pendamping di kelas, **bukan** jawaban dari Tugas Project Mandiri (wireframe/prototype untuk ide project akhir Anda sendiri). Tugas tersebut dikumpulkan secara terpisah melalui LMS.
+ 

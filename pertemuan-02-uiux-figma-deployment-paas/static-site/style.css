@@ -1,5 +1,18 @@
 /* Mini Project - Pertemuan 2: styling halaman statis sebelum deployment */
 
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-dark: #0f172a;
+  --bg-card: #f8fafc;
+  --text-dark: #0f172a;
+  --text-light: #ffffff;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --radius: 8px;
+  --transition: all 0.2s ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,26 +23,128 @@
 /* TODO 1: beri latar belakang gelap & padding pada .header, .logo bold & besar,
    nav rata kanan dengan jarak antar link */
 .header {
+  background-color: var(--bg-dark);
+  padding: 16px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header nav {
+  display: flex;
+  gap: 24px;
+}
+
+.header nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.header nav a:hover {
+  color: var(--text-light);
 }
 
 /* TODO 2: buat .hero rata tengah, judul besar (h1), tombol .cta menonjol dengan
    warna latar mencolok dan padding yang nyaman diklik */
 .hero {
+  text-align: center;
+  padding: 96px 20px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
 
 .cta {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.cta:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(235, 116, 37, 0.3);
 }
 
 /* TODO 3: buat .features menjadi grid 3 kolom dengan jarak antar kartu,
    .feature-card diberi latar belakang lembut & sudut membulat */
 .features {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .feature-card {
+  background-color: var(--bg-card);
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
 }
 
 .footer {
   text-align: center;
   padding: 24px;
-  color: #666;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+/* Tambahan: Responsif sederhana agar rapi di HP */
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .header {
+    padding: 16px 20px;
+  }
 }
