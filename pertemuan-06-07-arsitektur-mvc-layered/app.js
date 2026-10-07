@@ -8,7 +8,10 @@ const PORT = 3000;
 const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
 
 // TODO: app.use(express.json());
+app.use(express.json());
+
 // TODO: app.use('/mahasiswa', mahasiswaRoutes);
+app.use("/mahasiswa", mahasiswaRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
