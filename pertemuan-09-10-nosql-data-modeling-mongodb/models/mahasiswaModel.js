@@ -1,6 +1,3 @@
-// Mini Project - Pertemuan 9-10: Model Mahasiswa
-// TODO 1: lengkapi Schema di bawah ini.
-
 const mongoose = require("mongoose");
 
 const alamatSchema = new mongoose.Schema(
@@ -17,6 +14,9 @@ const mahasiswaSchema = new mongoose.Schema({
   alamat: alamatSchema,
   prodiId: { type: mongoose.Schema.Types.ObjectId, ref: 'Prodi', required: true },
   createdAt: { type: Date, default: Date.now },
+}, {
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
 });
 
 module.exports = mongoose.model("Mahasiswa", mahasiswaSchema);
