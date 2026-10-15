@@ -1,14 +1,24 @@
+// Mini Project - Pertemuan 9-10: Koneksi MongoDB & Routing
+require("dotenv").config();
 const express = require("express");
-const router = express.Router();
-const mahasiswaController = require("../controllers/mahasiswaController");
+const mongoose = require("mongoose");
 
-router.route("/")
-  .get(mahasiswaController.getAll)
-  .post(mahasiswaController.create);
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-router.route("/:id")
-  .get(mahasiswaController.getById)
-  .put(mahasiswaController.update)
-  .delete(mahasiswaController.remove);
+const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
+const prodiRoutes = require("./routes/prodiRoutes");
 
-module.exports = router;
+app.use(express.json());
+
+app.use('/mahasiswa', mahasiswaRoutes);
+app.use('/prodi', prodiRoutes);
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => { 
+    console.log('Terhubung ke MongoDB Atlas'); 
+    app.listen(PORT, () => {
+      console.log(`Server berjalan di port ${PORT}`);
+    }); 
+  })
+  .catch((err) => console.error('Gagal terhubung:', err.message));
