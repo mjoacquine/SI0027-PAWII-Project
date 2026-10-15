@@ -1,6 +1,3 @@
-// Mini Project - Pertemuan 9-10: Controller Mahasiswa
-// TODO 2: lengkapi setiap handler agar memanggil Model Mongoose yang sesuai.
-
 const Mahasiswa = require("../models/mahasiswaModel");
 
 exports.getAll = async (req, res) => {
