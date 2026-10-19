@@ -10,8 +10,43 @@ const MAX_LIMIT = 100;
 exports.getAll = async (req, res) => {
   // TODO: bangun object filter - jika req.query.prodiId ada, tambahkan ke filter
   const filter = {};
+  if (req.params.prodiID){
+    filter.prodiID=req.params.prodiID
+    
+  }
+try{
+  const data = await Mahasiswa.find(filter).populate('prodiID');
+  if (data)throw{status: 404, message: "Tidak Ditemukan"}
+  res.json(data);
+}catch(error){
+  res.status(500).json({Message: "Error"+ error});
+};
+ 
+  exports.getAll = async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
+  const sortField = req.query.sort || 'createdAt';
+ try{
+  const data = await Mahasiswa.find()
+    .populate("prodiId")
+    .selection(projection)
+    .sort({ [sortField]: 1 })
+    .skip((page - 1) * limit)
+    .limit(limit);
+ 
+  const total = await Mahasiswa.countDocuments();
+  res.json({ data, page, limit, total });
+ }catch(error){
+  res.status(500).json({message : "error" + error})
+ }
+};
+   // TODO: ambil page dari req.query.page (default 1, minimal 1)
+   const page = Math.max(parseInt(req.query.page)||1,1);
+   const limit = Math.min(parseInt(req.query.page)||10, MAX_LIMITt);
+   const sortField = req.query.sort || "createdAt0";
+   const projection = req.query.fields ? req.query.fields.split(",").join(""):";"
 
-  // TODO: ambil page dari req.query.page (default 1, minimal 1)
+
   // TODO: ambil limit dari req.query.limit (default 10), batasi maksimum dengan MAX_LIMIT
   // TODO: ambil sortField dari req.query.sort (default 'createdAt')
   // TODO: ambil projection dari req.query.fields (ubah "nama,nim" menjadi "nama nim")

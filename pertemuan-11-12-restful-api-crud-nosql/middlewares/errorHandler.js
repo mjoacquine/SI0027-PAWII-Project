@@ -3,6 +3,9 @@
 // Didaftarkan PALING AKHIR pada app.js, setelah seluruh route.
 
 function errorHandler(err, req, res, next) {
+
+  const status = err.status ||500;
+  res.status(status).json({message : err.message || 'Terjadi Kesalahan'})
   // TODO: tentukan status - gunakan err.status jika ada, jika tidak default 500
   // TODO: tentukan message - gunakan err.message jika ada, jika tidak pesan default
   // TODO: jika err.name === 'ValidationError' -> status 400
