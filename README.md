@@ -29,10 +29,10 @@ Topik SPA (Pertemuan 17-28) disediakan dalam dua varian stack, masing-masing di 
 | 1 | Full Stack Development & Arsitektur Aplikasi Web Decoupled | [`pertemuan-01-full-stack-arsitektur-decoupled`](pertemuan-01-full-stack-arsitektur-decoupled) | ✔️ |
 | 2 | UI/UX Design (Figma) & Ekosistem Deployment Modern (PaaS) | [`pertemuan-02-uiux-figma-deployment-paas`](pertemuan-02-uiux-figma-deployment-paas) |✔️ |
 | 3, 4 | Membangun RESTful API dengan Express.js | [`pertemuan-03-04-restful-api-expressjs`](pertemuan-03-04-restful-api-expressjs) | ✔️ |
-| 5 | Middleware & Konfigurasi Backend | [`pertemuan-05-middleware-konfigurasi-backend`](pertemuan-05-middleware-konfigurasi-backend) |  |
-| 6, 7 | Arsitektur Backend Terstruktur (MVC/Layered) | [`pertemuan-06-07-arsitektur-mvc-layered`](pertemuan-06-07-arsitektur-mvc-layered) |  |
+| 5 | Middleware & Konfigurasi Backend | [`pertemuan-05-middleware-konfigurasi-backend`](pertemuan-05-middleware-konfigurasi-backend) |  ✔️|
+| 6, 7 | Arsitektur Backend Terstruktur (MVC/Layered) | [`pertemuan-06-07-arsitektur-mvc-layered`](pertemuan-06-07-arsitektur-mvc-layered) | ✔️ |
 | 8 | Pengujian API dengan Postman Automation | [`pertemuan-08-pengujian-api-postman`](pertemuan-08-pengujian-api-postman) |  |
-| 9, 10 | NoSQL Data Modeling (MongoDB, Mongoose & MongoDB Atlas) | [`pertemuan-09-10-nosql-data-modeling-mongodb`](pertemuan-09-10-nosql-data-modeling-mongodb) |  |
+| 9, 10 | NoSQL Data Modeling (MongoDB, Mongoose & MongoDB Atlas) | [`pertemuan-09-10-nosql-data-modeling-mongodb`](pertemuan-09-10-nosql-data-modeling-mongodb) | ✔️ |
 | 11, 12 | RESTful API CRUD untuk Data NoSQL | [`pertemuan-11-12-restful-api-crud-nosql`](pertemuan-11-12-restful-api-crud-nosql) |  |
 | 13, 14 | Autentikasi Stateless dengan JWT & Keamanan API | [`pertemuan-13-14-autentikasi-jwt-keamanan-api`](pertemuan-13-14-autentikasi-jwt-keamanan-api) |  |
 | 15, 16 | Ujian Tengah Semester (UTS) | - | - |
