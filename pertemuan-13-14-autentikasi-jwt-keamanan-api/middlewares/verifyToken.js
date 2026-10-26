@@ -4,6 +4,18 @@
 const jwt = require("jsonwebtoken");
 
 function verifyToken(req, res, next) {
+  function verifyToken(req, res, next) {
+  const header = req.headers.authorization;
+  if (!header) throw { status: 401, message: 'Token tidak ditemukan' };
+ 
+  const token = header.split(' ')[1];
+  try {
+    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    next();
+  } catch (err) {
+    throw { status: 401, message: 'Token tidak valid/kedaluwarsa' };
+  }
+}
   // TODO: ambil header Authorization dari req.headers.authorization
   //   jika tidak ada -> throw { status: 401, message: 'Token tidak ditemukan' }
   // TODO: ambil token dari header (format "Bearer <token>"), pisahkan dengan .split(' ')[1]

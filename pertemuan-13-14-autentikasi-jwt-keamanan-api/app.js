@@ -15,6 +15,7 @@ const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
 const prodiRoutes = require("./routes/prodiRoutes");
 const errorHandler = require("./middlewares/errorHandler");
 
+
 app.use(cors());
 app.use(express.json());
 
