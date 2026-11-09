@@ -33,8 +33,8 @@ Topik SPA (Pertemuan 17-28) disediakan dalam dua varian stack, masing-masing di 
 | 6, 7 | Arsitektur Backend Terstruktur (MVC/Layered) | [`pertemuan-06-07-arsitektur-mvc-layered`](pertemuan-06-07-arsitektur-mvc-layered) | ✔️ |
 | 8 | Pengujian API dengan Postman Automation | [`pertemuan-08-pengujian-api-postman`](pertemuan-08-pengujian-api-postman) |  |
 | 9, 10 | NoSQL Data Modeling (MongoDB, Mongoose & MongoDB Atlas) | [`pertemuan-09-10-nosql-data-modeling-mongodb`](pertemuan-09-10-nosql-data-modeling-mongodb) | ✔️ |
-| 11, 12 | RESTful API CRUD untuk Data NoSQL | [`pertemuan-11-12-restful-api-crud-nosql`](pertemuan-11-12-restful-api-crud-nosql) |  |
-| 13, 14 | Autentikasi Stateless dengan JWT & Keamanan API | [`pertemuan-13-14-autentikasi-jwt-keamanan-api`](pertemuan-13-14-autentikasi-jwt-keamanan-api) |  |
+| 11, 12 | RESTful API CRUD untuk Data NoSQL | [`pertemuan-11-12-restful-api-crud-nosql`](pertemuan-11-12-restful-api-crud-nosql) |✔️  |
+| 13, 14 | Autentikasi Stateless dengan JWT & Keamanan API | [`pertemuan-13-14-autentikasi-jwt-keamanan-api`](pertemuan-13-14-autentikasi-jwt-keamanan-api) | ✔️ |
 | 15, 16 | Ujian Tengah Semester (UTS) | - | - |
 | 17, 18 | Arsitektur Komponen SPA Framework-Agnostik (React/MERN atau Angular Standalone) | [`pertemuan-17-18-arsitektur-komponen-spa`](pertemuan-17-18-arsitektur-komponen-spa) |  |
 | 19, 20 | Build Tools/CLI Modern untuk Proyek SPA | [`pertemuan-19-20-build-tools-cli-spa`](pertemuan-19-20-build-tools-cli-spa) |  |
