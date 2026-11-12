@@ -2,7 +2,7 @@
 // TODO 1: lengkapi komponen ini agar menerima nama & nim, lalu tampilkan pada template.
 
 import { Component } from '@angular/core';
-
+import { Input } from '@angular/core'
 @Component({
   selector: 'app-mahasiswa-card',
   standalone: true,

@@ -3,7 +3,7 @@
 
 import { Component } from '@angular/core';
 import { Mahasiswa } from '../../mahasiswa.model';
-
+import { Input } from '@angular/core'
 @Component({
   selector: 'app-mahasiswa-list',
   standalone: true,
