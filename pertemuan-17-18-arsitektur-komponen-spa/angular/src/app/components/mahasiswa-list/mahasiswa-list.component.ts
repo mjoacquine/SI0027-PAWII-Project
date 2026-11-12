@@ -16,4 +16,5 @@ import { Mahasiswa } from '../../mahasiswa.model';
 export class MahasiswaListComponent {
   // TODO: tambahkan import { Input } from '@angular/core' di atas
   // TODO: deklarasikan @Input() mahasiswa: Mahasiswa[] = [];
+  @Input() mahasiswa: Mahasiswa[] = [];
 }

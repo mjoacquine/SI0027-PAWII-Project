@@ -2,7 +2,7 @@
 // TODO 2: lengkapi komponen ini.
 
 import { Component } from '@angular/core';
-
+import { EventEmitter, Input, Output } from '@angular/core'
 @Component({
   selector: 'app-search-bar',
   standalone: true,
@@ -12,7 +12,8 @@ export class SearchBarComponent {
   // TODO: tambahkan import { EventEmitter, Input, Output } from '@angular/core' di atas
   // TODO: deklarasikan @Input() keyword = '';
   // TODO: deklarasikan @Output() search = new EventEmitter<string>();
-
+@Input () keyword = '';
+@Output() search = new EventEmitter<string>();
   onInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     // TODO: panggil this.search.emit(value);
