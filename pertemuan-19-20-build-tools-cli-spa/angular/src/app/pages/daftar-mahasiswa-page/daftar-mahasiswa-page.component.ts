@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { MahasiswaListComponent } from '../../components/mahasiswa-list/mahasiswa-list.component';
 import { Mahasiswa } from '../../mahasiswa.model';
+import { environment } from '../../../environments/environment';
 // TODO: tambahkan import { environment } from '../../../environments/environment';
 
 const DATA_MAHASISWA: Mahasiswa[] = [
@@ -22,6 +23,7 @@ const DATA_MAHASISWA: Mahasiswa[] = [
 export class DaftarMahasiswaPageComponent {
   keyword = '';
   // TODO: deklarasikan apiBaseUrl = environment.apiBaseUrl;
+  apiBaseUrl = environment.apiBaseUrl;
 
   get mahasiswaTersaring(): Mahasiswa[] {
     return DATA_MAHASISWA.filter((m) =>
