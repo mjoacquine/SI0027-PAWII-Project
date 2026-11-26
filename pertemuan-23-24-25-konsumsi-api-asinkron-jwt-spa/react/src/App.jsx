@@ -24,17 +24,28 @@ function DaftarMahasiswaPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
 
   useEffect(() => {
-    // TODO: panggil api.get('/mahasiswa')
-    // TODO: .then((res) => setMahasiswa(res.data.data))
-    // TODO: .catch(() => setError('Gagal memuat data mahasiswa'))
-    // TODO: .finally(() => setLoading(false))
+    api
+      .get("/mahasiswa")
+      .then((res) => {
+        const dataList = Array.isArray(res.data) ? res.data : res.data?.data ?? [];
+        setMahasiswa(dataList);
+      })
+      .catch(() => {
+        setError("Gagal memuat data mahasiswa");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   async function handleTambah(mahasiswaBaru) {
-    // TODO: bungkus dengan try/catch
-    // TODO: const res = await api.post('/mahasiswa', mahasiswaBaru)
-    // TODO: setMahasiswa((prev) => [...prev, res.data])
-    // TODO: pada catch, tampilkan alert('Gagal menambah data (pastikan Anda sudah login)')
+    try {
+      const res = await api.post("/mahasiswa", mahasiswaBaru);
+      const itemBaru = res.data?.data ?? res.data;
+      setMahasiswa((prev) => [...prev, itemBaru]);
+    } catch {
+      alert("Gagal menambah data (pastikan Anda sudah login)");
+    }
   }
 
   function handleLogout() {
@@ -43,7 +54,7 @@ function DaftarMahasiswaPage() {
   }
 
   const mahasiswaTersaring = mahasiswa.filter((m) =>
-    m.nama.toLowerCase().includes(keyword.toLowerCase())
+    (m?.nama ?? "").toLowerCase().includes(keyword.toLowerCase())
   );
 
   return (
