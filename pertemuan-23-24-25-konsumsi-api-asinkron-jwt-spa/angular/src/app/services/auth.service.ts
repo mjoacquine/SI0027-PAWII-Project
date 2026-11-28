@@ -11,7 +11,10 @@ export class AuthService {
   private baseUrl = environment.apiBaseUrl;
 
   login(username: string, password: string) {
-    // TODO: return this.http.post<{ token: string }>(`${this.baseUrl}/auth/login`, { username, password });
+    return this.http.post<{ token: string }>(`${this.baseUrl}/auth/login`, {
+      username,
+      password,
+    });
   }
 
   isLoggedIn(): boolean {

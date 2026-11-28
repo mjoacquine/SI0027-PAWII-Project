@@ -12,10 +12,10 @@ export class MahasiswaService {
   private baseUrl = environment.apiBaseUrl;
 
   getAll() {
-    // TODO: return this.http.get<{ data: Mahasiswa[] }>(`${this.baseUrl}/mahasiswa`);
+    return this.http.get<{ data: Mahasiswa[] }>(`${this.baseUrl}/mahasiswa`);
   }
 
   create(mahasiswa: { nama: string; nim: string }) {
-    // TODO: return this.http.post<Mahasiswa>(`${this.baseUrl}/mahasiswa`, mahasiswa);
+    return this.http.post<Mahasiswa>(`${this.baseUrl}/mahasiswa`, mahasiswa);
   }
 }
